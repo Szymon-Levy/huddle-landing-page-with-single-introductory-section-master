@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+:root{
+    --Violet: hsl(257, 40%, 49%);
+    --Soft-Magenta: hsl(300, 69%, 71%);
+    --body-ff: 'Open Sans', sans-serif;
+    --heading-ff: 'Poppins', sans-serif;
+    --body-fs: 16px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: var(--body-fs);
+    font-family: var(--body-ff);
+    background-color: var(--Violet);
+    line-height: 1.5;
+    text-align: center;
+    background-image: url("images/bg-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding-block: 30px;
+    color: white;
+    min-height: 100vh;
+}
+
+img{
+    width: 100%;
+    max-width: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 1350px;
+    padding: 0 35px;
+    margin-inline: auto;
+}
+
+header .logo {
+    text-align: left;
+}
+
+header .logo img {
+    max-width: 135px;
+}
+
+main{
+    padding-block: 50px;
+}
+
+h1{
+    font-family: var(--heading-ff);
+    font-weight: 600;
+    font-size: 25px;
+    padding: 55px 0 20px;
+}
+
+button{
+    background-color: white;
+    font-family: var(--heading-ff);
+    font-weight: 400;
+    border: 0;
+    outline: none;
+    border-radius: 100vmax;
+    padding: 10px 70px;
+    font-size: 13px;
+    margin-top: 25px;
+    color: var(--Violet);
+    box-shadow: 0px 6px 17px hsl(257deg 40% 35%);
+    transition: .4s;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: var(--Soft-Magenta);
+    color: white;
+}
+
+.socials a{
+    width: 30px;
+    height: 30px;
+    border: 1px solid white;
+    display: inline-block;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    border-radius: 50%;
+    margin: 0 3px;
+    font-size: 14px;
+    transition: .4s;
+}
+
+.socials a:hover{
+    color: var(--Soft-Magenta);
+    border-color: var(--Soft-Magenta);
+}
+
+/*-------devices--------*/
+
+@media(min-width: 1199px){
+    :root{
+        --body-fs: 18px
+    }
+    body{
+        background-image: url("images/bg-desktop.svg");
+        background-size: cover;
+        line-height: 1.7;
+        padding-block: 60px;
+    }
+    main {
+        padding: 80px 0 0px;
+    }
+    main .row {
+        display: flex;
+        text-align: left;
+        gap: 60px;
+    }
+    main .row .col.text {
+        width: 40%;
+    }
+    header .logo img {
+        max-width: 210px;
+    }
+    h1{
+        font-size: 40px;
+        line-height: 1.4;
+    }
+    button{
+        font-size: var(--body-fs);
+        padding-block: 16px;
+        margin-top: 35px;
+    }
+    .socials {
+        text-align: right;
+    }
+    .socials a{
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        margin: 0 0 0 10px;
+        font-size: 17px;
+    }
+}
